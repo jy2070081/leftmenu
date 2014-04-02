@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flyinmenu="http://schemas.android.com/apk/res/com.meiya.ui"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.meiya.ui.FlyInMenu
+        android:id="@+id/leftPanel2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/navigation_list_background"
+        flyinmenu:content="@+id/rightcontent"
+        flyinmenu:menu="@+id/menu" >
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/navigation_top_bar_background" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center|left"
+                    android:padding="10dp"
+                    android:text="百度新闻"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/navigation_top_bar_add" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/navigation_top_bar_edit" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/navigation_top_bar_setting" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#ff555555"
+                android:background="@color/transparent"
+                android:dividerHeight="1.0px"
+                 >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/panelH"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dip"
+                android:text="Content" />
+        </LinearLayout>
+    </com.meiya.ui.FlyInMenu>
+
+</RelativeLayout>
